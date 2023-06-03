@@ -23,9 +23,7 @@ async function getAbi(){
 }
 const abi = await getAbi();
 
-//const my_contract = new ethers.Contract(DEPLOYED_CONTRACT_ADDRESS, abi, signer);
 const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
-//console.log(my_contract);
 
 export async function mintToken(userAddress, _id) {
     let id = 0;
@@ -38,32 +36,3 @@ export async function setURI(userAddress) {
     //console.log(uri);
     return newURI.hash;
 }
-
-export async function pause() {
-    const paused = await my_contract.pause();
-    return paused;
-}
-
-export async function unpause() {
-    const unpaused = await my_contract.unpause();
-    return unpaused;
-}
-
-// Methods for checking Contracts functionality
-
-/*
-const mint = await mintToken(my_address);
-const receipt = await provider.waitForTransaction(mint.hash);
-console.log('Transaction confirmed in block:', receipt.blockNumber);
-const tokenCounter = await my_contract.tokenCounter();
-const supply = await my_contract.totalSupply(0);
-console.log(tokenCounter);
-console.log(supply);
-*/
-//const exists = await my_contract.exists(10);
-//console.log(exists);
-//const paused = pause();
-//const unpaused = unpause();
-
-
-
