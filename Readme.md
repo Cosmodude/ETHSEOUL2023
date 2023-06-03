@@ -1,11 +1,6 @@
-# First contract 
-0x34bf23FFB6Fe39fc3Bf4a21f08690a8652653b50
-# Updated 
-0x0FF739bbc489706313b21B73A13778CA56Db6F30
+# Smart Contract deployed on Chiado chain using truffle
+    0x06D825d9303f02B4BfCE5D49504aF33aeeb8e4e1
 
-"type": "module",
-
-# IPFS URI
-https://ipfs.io/ipfs/QmQn6J7YRLpmJmiZNmNtces2MrHtCy87cStcu1e2SVQ35i/
-
-# Gnosis Testnet
+# Interaction with contract can be done using 
+    - Active_SCMethods.js file (used for Frontend)
+    - SmartContractMethods.js file (used for setting up and testing)
