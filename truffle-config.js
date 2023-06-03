@@ -7,9 +7,9 @@ const privateKey = process.env.WALLET_PRIVATE_KEY;
 module.exports = {
   networks: {
     live: {
-      provider: function () { 
+      provider: function () {
         return new HDWalletProvider([privateKey], 'https://rpc.chiado.gnosis.gateway.fm')
-      }, 
+      },
       network_id: 10200,
       /*host: "178.25.19.88", // Random IP for example purposes (do not use)
       port: 80,
