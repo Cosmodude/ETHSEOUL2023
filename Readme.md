@@ -4,3 +4,5 @@
 0x0FF739bbc489706313b21B73A13778CA56Db6F30
 
 "type": "module",
+
+# IPFS URI
