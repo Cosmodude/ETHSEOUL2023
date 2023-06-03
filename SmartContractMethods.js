@@ -5,10 +5,11 @@ import { promises } from "fs";
 const fsPromises = promises;
 loadEnv();
 
-const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
+const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY1;
 const BASIC_CONTRACT_ADDRESS = "0x34bf23FFB6Fe39fc3Bf4a21f08690a8652653b50";
-const UPDATED_CONTRACT_ADDRESS = "0xE8D11cFaD8B908f507390b0882D7d011a6642443";
+const UPDATED_CONTRACT_ADDRESS = "0x06D825d9303f02B4BfCE5D49504aF33aeeb8e4e1";
 const my_address = "0x6f9e2777D267FAe69b0C5A24a402D14DA1fBcaA1";
+const summer_address = "0xb2d1BAa5fD0Ba77a6060D2D494a82EC025dA82EF";
 const BASIC_ABI_FILE_PATH = './ABI/ERC1155Basic.json';
 const UPDATED_ABI_FILE_PATH = './build/contracts/POM.json'
 
@@ -49,6 +50,10 @@ export async function unpause() {
     return unpaused;
 }
 
+async function addAdmin(adminAddress) {
+    const newAdmin = await my_contract.addAdmin(adminAddress);
+    return newAdmin;
+}
 // Methods for checking Contracts functionality
 
 /*
@@ -64,6 +69,18 @@ console.log(supply);
 //console.log(exists);
 //const paused = pause();
 //const unpaused = unpause();
+
+
+// Functions to add new admin 
+/*
+const newAdmin = await my_contract.addAdmin(my_address1);
+console.log(newAdmin);
+*/
+
+
+const mint = await mintToken(my_address);
+console.log(mint);
+
 
 
 
