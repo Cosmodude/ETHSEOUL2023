@@ -25,6 +25,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@infura/sdk": "^2.4.1",
     "@openzeppelin/contracts": "^4.9.0",
     "@truffle/hdwallet-provider": "^2.1.11",
     "body-parser": "^1.18.2",
