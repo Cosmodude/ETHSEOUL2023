@@ -6,6 +6,6 @@
 "type": "module",
 
 # IPFS URI
-
+https://ipfs.io/ipfs/QmQn6J7YRLpmJmiZNmNtces2MrHtCy87cStcu1e2SVQ35i/
 
 # Gnosis Testnet
