@@ -13,14 +13,14 @@ app.use(bodyParser.json());
 
 app.use('/', express.static('public_static'));
 
-app.get('/getAccounts', (req, res) => {
+app.get('api/getAccounts', (req, res) => {
   console.log("**** GET /getAccounts ****");
   truffle_connect.start(function (answer) {
     res.send(answer);
   })
 });
 
-app.post('/getBalance', (req, res) => {
+app.post('api/getBalance', (req, res) => {
   console.log("**** GET /getBalance ****");
   console.log(req.body);
   let currentAcount = req.body.account;
@@ -36,7 +36,7 @@ app.post('/getBalance', (req, res) => {
   });
 });
 
-app.post('/sendCoin', (req, res) => {
+app.post('api/sendCoin', (req, res) => {
   console.log("**** GET /sendCoin ****");
   console.log(req.body);
 
