@@ -5,7 +5,7 @@ import { promises } from "fs";
 const fsPromises = promises;
 loadEnv();
 
-const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY1;
+const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
 const BASIC_CONTRACT_ADDRESS = "0x34bf23FFB6Fe39fc3Bf4a21f08690a8652653b50";
 const UPDATED_CONTRACT_ADDRESS = "0x06D825d9303f02B4BfCE5D49504aF33aeeb8e4e1";
 const my_address = "0x6f9e2777D267FAe69b0C5A24a402D14DA1fBcaA1";
