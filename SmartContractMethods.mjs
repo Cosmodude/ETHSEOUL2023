@@ -1,4 +1,3 @@
-// set "type": "module" in package.json
 import { ethers } from "ethers";
 import { config as loadEnv } from 'dotenv';
 import { promises } from "fs";

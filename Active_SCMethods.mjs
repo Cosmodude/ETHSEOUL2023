@@ -1,7 +1,7 @@
-const { ethers } = require("ethers");
-const { config: loadEnv } = require('dotenv');
-const { promises: fsPromises } = require("fs");
-const { readFile } = fsPromises;
+import { ethers } from "ethers";
+import { config as loadEnv } from 'dotenv';
+import { promises } from "fs";
+const fsPromises = promises;
 loadEnv();
 
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
@@ -19,9 +19,9 @@ async function getAbi(){
     //console.log(abi);
     return abi;
 }
-const abi = await getAbi();
 
-const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
+    const abi = await getAbi();
+    const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
 
 // mints POM to the chosen address
 export async function mintToken(userAddress, _id) {
@@ -48,3 +48,11 @@ export async function tokenCounter() {
     const tokenCounter = await my_contract.tokenCounter();
     return tokenCounter;
 }
+
+
+
+
+const mint = await mintToken(my_address);
+console.log(mint);
+
+
