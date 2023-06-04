@@ -1,8 +1,12 @@
-const express = require('express');
-const Web3 = require('web3');
-import cors from 'cors';
+/*const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
-const { tokenCounter, mintToken } = require('./SmartContractMethods.mjs')
+const { tokenCounter, mintToken } = require('./Active_SCMethods.js')
+*/
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import { tokenCounter, mintToken } from './Active_SCMethods.js';
 
 const app = express();
 app.use(cors());
@@ -23,7 +27,7 @@ app.get('api/tokenCounter', async (req, res) => {
 });
 
 app.post("/api/claimPOM", async (req, res) => {
-  const userAddress = req.body.address ||  ;
+  const userAddress = req.body.address || my_addres;
   console.log('**** Claiming POM... ****');
   const minted = await mintToken(userAddress, 0);
   res.status(200).set('Content-Type', 'application/json').send(minted.hash);

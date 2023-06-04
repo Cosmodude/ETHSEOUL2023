@@ -1,3 +1,8 @@
+/*const { ethers } = require("ethers");
+const { config: loadEnv } = require('dotenv');
+const { promises: fsPromises } = require("fs");
+const { readFile } = fsPromises;
+loadEnv();*/
 import { ethers } from "ethers";
 import { config as loadEnv } from 'dotenv';
 import { promises } from "fs";
@@ -20,8 +25,14 @@ async function getAbi(){
     return abi;
 }
 
-const abi = await getAbi();
-const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
+    const abi = await getAbi();
+    const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
+    
+const getContract = async function () {
+    const abi = await getAbi();
+    const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
+    return my_contract;
+}
 
 // mints POM to the chosen address
 export async function mintToken(userAddress, _id) {
@@ -52,7 +63,7 @@ export async function tokenCounter() {
 
 
 
-const mint = await mintToken(my_address);
-console.log(mint);
+//const mint = await mintToken(my_address);
+//console.log(mint);
 
 
