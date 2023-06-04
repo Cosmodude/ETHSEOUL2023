@@ -29,7 +29,7 @@ contract POM is ERC1155, Ownable, Pausable, ERC1155Burnable, ERC1155Supply {
         admins[newAdmin] = true;
     }
 
-    function setURI(string memory newuri) public onlyOwner {
+    function setURI(string memory newuri) public onlyAdmin {
         _setURI(newuri);
     }
 

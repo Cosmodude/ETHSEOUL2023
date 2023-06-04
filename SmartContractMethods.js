@@ -7,7 +7,7 @@ loadEnv();
 
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
 const BASIC_CONTRACT_ADDRESS = "0x34bf23FFB6Fe39fc3Bf4a21f08690a8652653b50";
-const UPDATED_CONTRACT_ADDRESS = "0x06D825d9303f02B4BfCE5D49504aF33aeeb8e4e1";
+const UPDATED_CONTRACT_ADDRESS = "0x39B45E1147f0A19F9D2979a1CBa2e8660fB34408";
 const my_address = "0x6f9e2777D267FAe69b0C5A24a402D14DA1fBcaA1";
 const Summer_address = "0x19294812D348aa770b006D466571B6D6c4C62365";
 const BASIC_ABI_FILE_PATH = './ABI/ERC1155Basic.json';
@@ -30,7 +30,7 @@ const my_contract = new ethers.Contract(UPDATED_CONTRACT_ADDRESS, abi, signer);
 
 export async function mintToken(userAddress, _id) {
     let id = 0;
-    const mint_tx = await my_contract.mint(userAddress, 0, 1, '0x0102');  // second argumnent is id
+    const mint_tx = await my_contract.mint(userAddress, 1, 1, '0x0102');  // second argumnent is id
     return mint_tx;
 }
 
@@ -54,6 +54,18 @@ async function addAdmin(adminAddress) {
     const newAdmin = await my_contract.addAdmin(adminAddress);
     return newAdmin;
 }
+
+export async function totalSupply(id) {
+    const supply = await my_contract.totalSupply(id);
+    return supply;
+}
+
+export async function tokenCounter() {
+    const tokenCounter = await my_contract.tokenCounter();
+    return tokenCounter;
+}
+
+
 // Methods for checking Contracts functionality
 
 /*
@@ -69,18 +81,20 @@ console.log(supply);
 //console.log(exists);
 //const paused = pause();
 //const unpaused = unpause();
-
+//console.log(await totalSupply(1));
+//console.log(await tokenCounter());
 
 // Functions to add new admin
 
-/*
+
 const newAdmin = await my_contract.addAdmin(Summer_address);
 console.log(newAdmin);
-*/
+
 
 // Mint
 //const mint = await mintToken(my_address);
 //console.log(mint);
+
 
 
 

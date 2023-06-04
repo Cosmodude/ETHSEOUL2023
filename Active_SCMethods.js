@@ -6,7 +6,7 @@ const fsPromises = promises;
 loadEnv();
 
 const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
-const UPDATED_CONTRACT_ADDRESS = "0x06D825d9303f02B4BfCE5D49504aF33aeeb8e4e1";
+const UPDATED_CONTRACT_ADDRESS = "0x39B45E1147f0A19F9D2979a1CBa2e8660fB34408";
 const my_address = "0x6f9e2777D267FAe69b0C5A24a402D14DA1fBcaA1";
 const summer_address = "0xb2d1BAa5fD0Ba77a6060D2D494a82EC025dA82EF";
 const UPDATED_ABI_FILE_PATH = './build/contracts/POM.json'
@@ -34,4 +34,14 @@ export async function setURI(userAddress) {
     const newURI = await my_contract.setURI('ipfs://Qmdtyqjx5ha9dBda6ZE5dc2N4vB8oAZYrLhGQj5jAah2RF/');
     //console.log(uri);
     return newURI.hash;
+}
+
+export async function totalSupply(id) {
+    const supply = await my_contract.totalSupply(id);
+    return supply;
+}
+
+export async function tokenCounter() {
+    const tokenCounter = await my_contract.tokenCounter();
+    return tokenCounter;
 }
