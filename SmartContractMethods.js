@@ -34,10 +34,10 @@ export async function mintToken(userAddress, _id) {
     return mint_tx;
 }
 
-export async function setURI(userAddress) {
-    const newURI = await my_contract.setURI('ipfs://Qmdtyqjx5ha9dBda6ZE5dc2N4vB8oAZYrLhGQj5jAah2RF/');
+export async function setURI(newURI) {
+    const setURI = await my_contract.setURI(newURI);
     //console.log(uri);
-    return newURI.hash;
+    return setURI.hash;
 }
 
 export async function pause() {
@@ -91,6 +91,7 @@ const newAdmin = await my_contract.addAdmin(Summer_address);
 console.log(newAdmin);
 */
 
+//await setURI("ipfs://QmbbTwoKVcXazHfxBQgUNtMGqQc5JbTNCSKGBs3GFyWA1D")
 
 // Mint
 //const mint = await mintToken(my_address);
