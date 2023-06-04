@@ -9,7 +9,7 @@ const PRIVATE_KEY = process.env.WALLET_PRIVATE_KEY;
 const UPDATED_CONTRACT_ADDRESS = "0x39B45E1147f0A19F9D2979a1CBa2e8660fB34408";
 const my_address = "0x6f9e2777D267FAe69b0C5A24a402D14DA1fBcaA1";
 const summer_address = "0xb2d1BAa5fD0Ba77a6060D2D494a82EC025dA82EF";
-const UPDATED_ABI_FILE_PATH = './build/contracts/POM.json'
+const UPDATED_ABI_FILE_PATH = './ABI/POM.json';
 
 const provider = ethers.getDefaultProvider(`https://rpc.chiado.gnosis.gateway.fm`);
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);

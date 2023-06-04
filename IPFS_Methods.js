@@ -72,4 +72,4 @@ async function storeFolder(names, imageLinks, link = defaultLink) {
     return storeArrayMetadata;
 }
 
-storeFolder(["Vlad","bob"], ["https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png","https://storage.googleapis.com/opensea-prod.appspot.com/puffs/4.png"]);
+//storeFolder(["Vlad","bob"], ["https://storage.googleapis.com/opensea-prod.appspot.com/puffs/3.png","https://storage.googleapis.com/opensea-prod.appspot.com/puffs/4.png"]);

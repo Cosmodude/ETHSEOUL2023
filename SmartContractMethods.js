@@ -86,9 +86,10 @@ console.log(supply);
 
 // Functions to add new admin
 
-
+/*
 const newAdmin = await my_contract.addAdmin(Summer_address);
 console.log(newAdmin);
+*/
 
 
 // Mint
