@@ -1,5 +1,5 @@
-var POM = artifacts.require("./POM.sol");
+var FRENS = artifacts.require("./FRENS.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(POM);
+  deployer.deploy(FRENS);
 };

@@ -54,12 +54,6 @@ export async function totalSupply(id) {
     return supply;
 }
 
-// returns the number of existing POMs (counter of Users' profiles)
-export async function tokenCounter() {
-    const tokenCounter = await my_contract.tokenCounter();
-    return tokenCounter;
-}
-
 
 
 
