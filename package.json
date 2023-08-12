@@ -1,5 +1,5 @@
 {
-  "name": "ETHSEOUL2023",
+  "name": "ETHParis2023",
   "version": "0.0.2",
   "description": "Make API-Endpoints for Ethereum BlockChain",
   "scripts": {
@@ -23,7 +23,6 @@
     "truffle-contract": "^1.1.11",
     "web3": "^0.20.0"
   },
-  "type": "module",
   "dependencies": {
     "@infura/sdk": "^2.4.1",
     "@openzeppelin/contracts": "^4.9.0",
